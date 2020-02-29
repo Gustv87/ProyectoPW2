@@ -8,6 +8,7 @@ Team = require('./api/models/teamModel'),
 Project = require('./api/models/projectModel'),
 Activity = require('./api/models/activityModel'),
 bodyParser = require('body-parser');
+const cors = require('cors');
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/TimeTrackerDb', { useFindAndModify: false, useNewUrlParser: true, useUnifiedTopology: true });
@@ -15,6 +16,7 @@ mongoose.connect('mongodb://localhost/TimeTrackerDb', { useFindAndModify: false,
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cors());
 
 var userRoutes = require('./api/routes/userRoutes');
 var teamRoutes = require('./api/routes/teamRoutes');
@@ -28,5 +30,6 @@ projectRoutes(app);
 activityRoutes(app);
 
 app.listen(port);
+
 
 console.log('Time Tracker API server started on: ' + port);
