@@ -1,0 +1,52 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="col-md-8 order-md-1">
+    <h4 class="mb-3">Registro de Usuario</h4>
+    <form class="needs-validation" novalidate="">
+        <div class="row">
+            <div class="col-md-6 mb-6">
+                <label for="firstName">Nombre</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                <div class="invalid-feedback" style="width: 100%;">
+                    Valid first name is required.
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mb-3">
+            <label for="username">Nombre de Usuario</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                </div>
+                <input type="text" class="form-control" id="username"  required="">
+                <div class="invalid-feedback" style="width: 100%;">
+                    Your username is required.
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="email">Contraseña <span class="text-muted"></span></label>
+            <input type="password" class="form-control" id="password">
+            <div class="invalid-feedback">
+                Please enter a valid email address for register.
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="email">Email <span class="text-muted"></span></label>
+            <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            <div class="invalid-feedback">
+                Please enter a valid email address for register.
+            </div>
+        </div>
+
+
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Registrar usuario</button>
+    </form>
+</div>

@@ -1,0 +1,22 @@
+<div class="card my-5 mb-3">
+    <div class="card-body">
+        <h3 class="card-title">Equipos</h3>
+        <div class="card-text">
+            <div class="table-resposive">
+                <table class="table table-hover">
+                    <thead>
+                        <th>Nombre del Equipo</th>
+                        
+                        
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let team of teams">
+                            <td>{{team.name}}</td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
