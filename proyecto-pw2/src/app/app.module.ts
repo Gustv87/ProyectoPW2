@@ -9,17 +9,19 @@ import { ProjectsComponent } from './projects/projects.component';
 import { TeamsComponent } from './teams/teams.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
-    AppComponent,    
+    AppComponent,
     UsersComponent, ProjectsComponent, TeamsComponent, LoginComponent, RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

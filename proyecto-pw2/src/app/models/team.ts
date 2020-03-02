@@ -1,4 +1,5 @@
 export class Team {
-    name:string;    
+    name:string;  
+    team:Team;  
 
 }

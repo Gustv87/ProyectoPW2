@@ -1,19 +1,50 @@
 <div class="card my-5 mb-3">
     <div class="card-body">
+
         <h3 class="card-title">Proyectos</h3>
         <div class="card-text">
             <div class="table-resposive">
                 <table class="table table-hover">
                     <thead>
-                        <th>Nombre del Proyecto</th>                       
+                        <th>Nombre del Proyecto</th>
                     </thead>
                     <tbody>
                         <tr *ngFor="let project of projects">
-                            <td>{{project.name}}</td>                            
+                            <td>{{project.name}}</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+</div>
+
+
+
+<div class="modal fade" id="modalProjectForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center" style="background-color: #343A40; color:whitesmoke ;">
+                <h4 class="modal-title w-100 font-weight-bold">Crear Proyecto</h4>
+                <button type="button" class="close"  aria-label="Close" style="color: whitesmoke;">
+
+                </button>
+            </div>
+            <div class="modal-body mx-3">
+                <div class="md-form mb-5">
+                    
+                    <input type="text" name="name" class="form-control" [(ngModel)]='project.name' placeholder="Nombre">                    
+                </div>
+
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button (click)='addProject()' class="btn btn-primary waves-effect">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="form-inline">
+    <button class="btn btn-primary waves-effect" data-toggle="modal" data-target="#modalProjectForm">Agregar</button>
 </div>
