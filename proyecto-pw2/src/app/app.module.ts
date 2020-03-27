@@ -8,20 +8,28 @@ import { UsersComponent } from './users/users.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { TeamsComponent } from './teams/teams.component';
 import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
 import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent, ProjectsComponent, TeamsComponent, LoginComponent, RegisterComponent
+    UsersComponent,
+    ProjectsComponent, 
+    TeamsComponent, 
+    LoginComponent,
+    
+   
+    
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
