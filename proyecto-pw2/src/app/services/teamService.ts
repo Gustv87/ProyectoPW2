@@ -13,6 +13,6 @@ export class TeamService {
   constructor(private httpClient: HttpClient) { }
 
   getTeams() {
-    return this.httpClient.get(`${this.baseUrl}/${this.teamsPath}`);
+    return this.httpClient.get(`${this.baseUrl}/${this.teamsPath}`,{ headers: {"x-access-token" : localStorage.getItem('token')} });
   }
 }

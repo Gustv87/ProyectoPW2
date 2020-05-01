@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Team } from '../models/team';
 import { TeamService } from '../services/teamService';
+import {ButtonModule} from 'primeng/button';
 
 @Component({
   selector: 'app-teams',

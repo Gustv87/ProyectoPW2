@@ -13,11 +13,11 @@ export class UserService {
   constructor(private httpClient: HttpClient) { }
 
   getUsers() {
-    return this.httpClient.get(`${this.baseUrl}/${this.usersPath}`);
+    return this.httpClient.get(`${this.baseUrl}/${this.usersPath}`,{ headers: {"x-access-token" : localStorage.getItem('token')} });
   }
 
   postUser(users : User){
-    return this.httpClient.post(`${this.baseUrl}/${this.usersPath}`, users);
+    return this.httpClient.post(`${this.baseUrl}/${this.usersPath}`, users, { headers: {"x-access-token" : localStorage.getItem('token')} });
     
 }
 }
