@@ -12,7 +12,7 @@ exports.listAll = function (req, res) {
 };
 
 exports.add = function (req, res) {
-    if(!req.isAdmin){
+    if (!req.isAdmin) {
         return res.status(401).send("Unauthorized user!");
     }
     let newTeam = new Team(req.body);
@@ -36,11 +36,11 @@ exports.get = function (req, res) {
 }
 
 exports.update = function (req, res) {
-    if(!req.isAdmin){
+    if (!req.isAdmin) {
         return res.status(401).send("Unauthorized user!");
     }
     Teams.findOneAndUpdate({ _id: req.params.teamId }, req.body, { new: true }, function (err, team) {
-        if(err){
+        if (err) {
             res.send(err);
         }
         res.json(team);
