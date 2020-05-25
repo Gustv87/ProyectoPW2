@@ -8,8 +8,8 @@ import { Project } from '../models/project';
 })
 
 export class ProjectService {
-    private baseUrl: string = "http://localhost:3000";
-    private projectPath: string = "projects";
+    private baseUrl: string = 'http://localhost:3000';
+    private projectPath: string = 'projects';
 
 
     constructor(private httpClient: HttpClient) {
@@ -17,13 +17,13 @@ export class ProjectService {
     }
 
     getProjects() {
-        return this.httpClient.get(`${this.baseUrl}/${this.projectPath}`,{ headers: {"x-access-token" : localStorage.getItem('token')} });
+        return this.httpClient.get(`${this.baseUrl}/${this.projectPath}`,{ headers: {'x-access-token' : localStorage.getItem('token')} });
     }
 
 
 
     addProjects(project: Project) {
-        return this.httpClient.post(`${this.baseUrl}/${this.projectPath}`, project, { headers: {"x-access-token" : localStorage.getItem('token')} });
+        return this.httpClient.post(`${this.baseUrl}/${this.projectPath}`, project, { headers: {'x-access-token' : localStorage.getItem('token')} });
 
     }
 

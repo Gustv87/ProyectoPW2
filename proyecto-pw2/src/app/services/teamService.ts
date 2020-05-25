@@ -7,12 +7,12 @@ import { HttpClient } from '@angular/common/http';
   })
 
 export class TeamService {
-    private baseUrl: string = "http://localhost:3000";
-  private teamsPath: string = "teams";
+    private baseUrl: string = 'http://localhost:3000';
+  private teamsPath: string = 'teams';
 
   constructor(private httpClient: HttpClient) { }
 
   getTeams() {
-    return this.httpClient.get(`${this.baseUrl}/${this.teamsPath}`,{ headers: {"x-access-token" : localStorage.getItem('token')} });
+    return this.httpClient.get(`${this.baseUrl}/${this.teamsPath}`,{ headers: {'x-access-token' : localStorage.getItem('token')} });
   }
 }
