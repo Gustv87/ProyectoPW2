@@ -4,16 +4,16 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UsersComponent } from './users/users.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { TeamsComponent } from './teams/teams.component';
-import { LoginComponent } from './login/login.component';
+import { UsersComponent } from './Components/users/users.component';
+import { ProjectsComponent } from './Components/projects/projects.component';
+import { TeamsComponent } from './Components/teams/teams.component';
+import { LoginComponent } from './Components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {ButtonModule} from 'primeng/button';
-import {PasswordModule} from 'primeng/password';
-import {InputTextModule} from 'primeng/inputtext';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ButtonModule } from 'primeng/button';
+import { PasswordModule } from 'primeng/password';
+import { InputTextModule } from 'primeng/inputtext';
 
 
 
@@ -22,10 +22,10 @@ import {InputTextModule} from 'primeng/inputtext';
   declarations: [
     AppComponent,
     UsersComponent,
-    ProjectsComponent, 
-    TeamsComponent, 
+    ProjectsComponent,
+    TeamsComponent,
     LoginComponent,
-    
+
   ],
   imports: [
     BrowserModule,

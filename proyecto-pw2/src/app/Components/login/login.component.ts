@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from '../services/authenticationService';
+import { AuthenticationService } from '../../services/authenticationService';
 import { Router } from '@angular/router';
 
 @Component({
@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
         this.success = data.auth;
         if (data.auth) {
           this.authenticationService.saveToken(data.token, data.isAdmin);
-          this.router.navigate(["/users"]);
+          this.router.navigate(['/users']);
         }
       },
         error => {

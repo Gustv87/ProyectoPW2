@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Project } from '../models/project';
-import { ProjectService } from '../services/projectService';
+import { Project } from '../../models/project';
+import { ProjectService } from '../../services/projectService';
 
 @Component({
   selector: 'app-projects',
@@ -10,21 +10,21 @@ import { ProjectService } from '../services/projectService';
 export class ProjectsComponent implements OnInit {
 
   projects: Array<Project>;
-  project = new Project;
- 
+  project = new Project();
 
-  constructor(private projectService: ProjectService) { 
-    
+
+  constructor(private projectService: ProjectService) {
+
   }
 
   ngOnInit() {
     this.loadProjects();
-    
+
   }
 
   loadProjects(): void {
     this.projectService.getProjects()
-      .subscribe((projects : Array<Project>) => {
+      .subscribe((projects: Array<Project>) => {
         this.projects = projects;
       }, error => {
         alert('Error');
@@ -34,7 +34,7 @@ export class ProjectsComponent implements OnInit {
 
   addProject(): void {
     this.projectService.addProjects(this.project)
-      .subscribe((projects : Project) => {
+      .subscribe((projects: Project) => {
         alert('Se agrego el proyecto exitosamente');
         this.projects.push(projects);
       }, error => {

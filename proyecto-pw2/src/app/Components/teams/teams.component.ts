@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Team } from '../models/team';
-import { TeamService } from '../services/teamService';
-import {ButtonModule} from 'primeng/button';
+import { Team } from '../../models/team';
+import { TeamService } from '../../services/teamService';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-teams',
@@ -10,19 +10,19 @@ import {ButtonModule} from 'primeng/button';
 })
 export class TeamsComponent implements OnInit {
 
-  teams : Array<Team>;
+  teams: Array<Team>;
 
-  constructor(private teamService : TeamService) { }
+  constructor(private teamService: TeamService) { }
 
   ngOnInit() {
     this.loadTeams();
   }
 
-  loadTeams() : void{
+  loadTeams(): void {
     this.teamService.getTeams()
-      .subscribe((teams : Array<Team>) => {
+      .subscribe((teams: Array<Team>) => {
         this.teams = teams;
-      }, error=> {
+      }, error => {
         alert('Error');
         console.log(error);
       })

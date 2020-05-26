@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../models/user';
-import { UserService } from '../services/userService';
+import { User } from '../../models/user';
+import { UserService } from '../../services/userService';
 
 
 @Component({
@@ -10,19 +10,19 @@ import { UserService } from '../services/userService';
 })
 export class UsersComponent implements OnInit {
 
-  users : Array<User>;
+  users: Array<User>;
 
-  constructor(private userService : UserService) { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
     this.loadUsers();
   }
 
-  loadUsers() : void{
+  loadUsers(): void {
     this.userService.getUsers()
-      .subscribe((users : Array<User>) => {
+      .subscribe((users: Array<User>) => {
         this.users = users;
-      }, error=> {
+      }, error => {
         alert('Ocurrió un error');
         console.log(error);
       })

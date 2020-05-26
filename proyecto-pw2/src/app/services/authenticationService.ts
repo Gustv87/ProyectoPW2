@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AuthenticationService {
-  private baseUrl: string = "http://localhost:3000";
-  private usersPath: string = "login";
+  private baseUrl: string = 'http://localhost:3000';
+  private usersPath: string = 'login';
 
   constructor(private httpClient: HttpClient) { }
 
